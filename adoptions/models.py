@@ -1,6 +1,7 @@
 from django.db import models
 
 class Pet(models.Model):
+    """Lists pets and their attributes"""
     SEX_CHOICES = [('M',  'Male'), ('F', 'Female'), ('T', 'Transgender')]
     name = models.CharField(max_length=100)
     submitter = models.CharField(max_length=100)
@@ -15,3 +16,7 @@ class Pet(models.Model):
 
 class Vaccine(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        """returns the name of the vaccine"""
+        return self.name
