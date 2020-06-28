@@ -1,5 +1,7 @@
 <!--pet_detail-->
 
+{% extends "base.html" %}
+{% block content %}
 <div>
     <!--passes in from its view pet.name variable-->
     <!--passing into the cap first filter-->
@@ -28,3 +30,4 @@
     <p>
     <p>{{ pet.description }}
 </div>
+{% endblock %}
